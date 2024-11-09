@@ -29,24 +29,32 @@
 </html>
  -->
 
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
-  <title>Bootstrap Website Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-  .fakeimg {
-    height: 200;
-    background: #aaa;
-  }
-  </style>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" 
+        ="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 </head>
 <body>
+  <section class="page-header">
+    <h1 class="project-name">Natan Aklilu's Professional Website</h1>
+    <h2 class="project-tagline">My Website</h2>
+    <a href="index" class="btn">About</a>
 
+  </section>
+
+  <section class="main-content">
+    
+    {{ content }}
+
+  </section>
+    
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>My First Bootstrap Page</h1>
   <p>Resize this responsive page to see the effect!</p> 
