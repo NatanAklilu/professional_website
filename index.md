@@ -6,7 +6,7 @@ filename: index
 
 # Who am I?
 
-## Cornell University, College of Engineering
+## Cornell University, [College of Engineering](https://www.engineering.cornell.edu/)
 _May 2025_  \| Ithaca, NY
 - Bachelor of Science, Computer Science
   
@@ -61,4 +61,4 @@ The most challenging aspects of this included:
 - FILL
 
 # Contact Me
-I'd love to connect with you! Reach out to me at my [LinkedIn](www.linkedin.com/in/natantaklilu)
+I'd love to connect with you! Reach out to me at my [LinkedIn](https://www.linkedin.com/in/natantaklilu/)
