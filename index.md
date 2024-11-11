@@ -1,3 +1,9 @@
+---
+title: About
+layout: template
+filename: index
+--- 
+
 # Who am I?
 
 ## Cornell University, College of Engineering
