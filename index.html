@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
@@ -21,31 +16,25 @@
 
 		<!-- Header -->
 		<header id="header">
-			<h1 id="logo"><a href="index.html"><img src="Media/Website_Logo.jpg" height="100%"></a></h1>
+			<h1 id="logo"><a href="index.html" class="scrolly"><img src="Media/Website_Logo.jpg" height="100%"></a></h1>
 			<nav id="nav">
 				<ul>
-					<li><a href="#one">About Me</a></li>
+					<li><a href="#one" class="scrolly">About Me</a></li>
+					<li><a href="#two" class="scrolly">Experience</a>
+					<li><a href="#three" class="scrolly">Education</a></li>
 					<li>
-						<a href="#two">Experience</a>
+						<a href="#four" class="scrolly">Projects</a>
 						<ul>
-							<li><a href="#three">Education</a></li>
-							<li><a href="#four">Internships</a></li>
-							<li>
-								<a href="#five">Projects</a>
-								<ul>
-									<!--
-								    Will update these links once completed
-									-->
-									<li><a href="#five">Bridge Quote Simulation</a></li>
-									<li><a href="#five">AWS Darkroom Anomaly Detection</a></li>
-									<li><a href="#five">CamlChess</a></li>
-									<li><a href="#five">Space Invaders</a></li>
-								</ul>
-							</li>
+							<!--
+								Will update these links once completed
+							-->
+							<li><a href="Bridge_Quote_Simulation.html" class="scrolly">Bridge Quote Simulation</a></li>
+							<li><a href="Anomaly_Detection.html" class="scrolly">Anomaly Detection</a></li>
+							<li><a href="CamlChess.html" class="scrolly">CamlChess</a></li>
+							<li><a href="#four" class="scrolly">Space Invaders</a></li>
 						</ul>
 					</li>
-					<li><a href="Media/Natan_Aklilu_Resume_2025.pdf" download>Resume</a></li>
-					<li><a href="#five" class="button primary">Contact Me</a></li>
+					<li><a href="Media/Natan_Aklilu_Resume_2025.pdf" download class="button primary">Resume</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -55,43 +44,69 @@
 			<div class="content">
 				<header>
 					<h2 style="text-align:center; font-size:4em;">Natan Aklilu</h2>
-					<p style="text-align:center; font-size:2em;">Software Engineer | Cornell CS Graduate</p>
-					<a href="https://www.linkedin.com/in/natantaklilu/" class="icon brands alt fa-linkedin-in"><span
-							class="label">LinkedIn</span></a>
-					<a href="https://github.com/NatanAklilu" class="icon brands alt fa-github"><span
-							class="label">GitHub</span></a>
-
+					<p class="typed-out" style="text-align:center; font-size:2em;">Software Engineer | Cornell CS</p>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/natantaklilu/" class="icon brands alt fa-linkedin-in"><span
+									class="label" style="text-align:center;">LinkedIn</span></a></li>
+						<li><a href="https://github.com/NatanAklilu" class="icon brands alt fa-github"><span
+									class="label">GitHub</span></a></li>
+					</ul>
 				</header>
 				<span class="image"><img src="Media/Natan_Aklilu_Headshot_Square.jpg" alt="" /></span>
 			</div>
 			<a href="#one" class="goto-next scrolly">Next</a>
 		</section>
 
+		<!-- Adding a button to help bring user to top of page (using some Javascript)-->
+
+		<div>
+			<a href="#banner" id="scroll_up_btn" class="button primary scrolly" title="Scroll to top">Top</a>
+			<script>// Get the button:
+				let mybutton = document.getElementById("scroll_up_btn");
+
+				// When the user scrolls down 30px from the top of the document, show the button
+				window.onscroll = function () { scrollFunction() };
+
+				function scrollFunction() {
+					if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+						mybutton.style.display = "block";
+					} else {
+						mybutton.style.display = "none";
+					}
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+					document.body.scrollTop = 0; // For Safari
+					document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+				} </script>
+		</div>
+
 		<!-- One: About Me -->
 		<section id="one" class="spotlight style1 bottom">
-			<span class="image fit main"><img src="Media/Natan_Travel_Photo_Cropped.jpg" alt="" /></span>
+			<span class="image fit main"><img src="Media/Natan_Travel_Photo_Cropped_More.jpg" alt="" /></span>
 			<div class="content">
 				<div class="container">
 					<div class="row">
 						<div class="col-4 col-12-medium">
 							<header>
-								<h2>Odio faucibus ipsum integer consequat</h2>
-								<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
+								<h2>This is me!</h2>
+								<p>Here's a little bit about myself.</p>
 							</header>
 						</div>
 						<div class="col-4 col-12-medium">
-							<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-								Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-								nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-								augue varius tempus lobortis porttitor accumsan consequat
-								adipiscing lorem dolor.</p>
+							<p>
+								I am a senior studing Computer Science at Cornell University with
+								a graduaton date of May 2025. My interests in software lie in
+								backend development, but I have experience working full-stack as well.
+							</p>
 						</div>
 						<div class="col-4 col-12-medium">
-							<p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
-								adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-								Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-								mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-								ipsum dolor nullam.</p>
+							<p>
+								I want to take my skills and knowledge to the next level and work
+								on impactful projects that will make a difference in the world!
+							</p>
 						</div>
 					</div>
 				</div>
@@ -101,17 +116,25 @@
 
 		<!-- Two: Experience -->
 		<section id="two" class="spotlight style2 right">
-			<span class="image fit main"><img src="Media/Experience_Overview_Vertical_Stack.png" alt="" /></span>
+			<span class="image fit main"><img src="Media/Coinbase_Group_Pic.jpg" alt="" /></span>
 			<div class="content">
 				<header>
-					<h2>Interdum amet non magna accumsan</h2>
-					<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+					<h2>Experience</h2>
+					<p>See me at work!</p>
 				</header>
-				<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-					mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing
-					lorem.</p>
+				<p>Here is where you will find all the juicy details about my career thus far!
+					I'll take you on a trip through my time as member of CU GeoData where I developed
+					my data analysis skills and learned the useful process of iterative development of
+					a software project.
+				</p>
+				<p>
+					From there, I will take you into my first taste of the industry as a Software Engineer
+					Intern at Amazon Web Services where I dove deep into the AWS tech stack to work on an
+					impactful project. I then took my talents to Mountain View this past summer with a
+					Coinbase Software Engineering Internship and here I am today!
+				</p>
 				<ul class="actions">
-					<li><a href="#" class="button">Learn More</a></li>
+					<li><a href="#header" class="button scrolly">Learn More</a></li>
 				</ul>
 			</div>
 			<a href="#three" class="goto-next scrolly">Next</a>
@@ -119,68 +142,117 @@
 
 		<!-- Three: Education -->
 		<section id="three" class="spotlight style3 left">
-			<span class="image fit main bottom"><img src="Media/LinkedIn_Cornell_Banner.jpg" alt="" /></span>
+			<span class="image fit main bottom"><img src="Media/Cornell_Stock_Image2.jpg" alt="" /></span>
 			<div class="content">
 				<header>
-					<h2>Interdum felis blandit praesent sed augue</h2>
-					<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+					<h2>Educational Background</h2>
+					<p>What do I bring to the table?</p>
 				</header>
-				<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-					mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing
-					lorem.</p>
+				<p>I have a Bachelor of Science in Computer Science from Cornell University,
+					one of the top Engineering schools in the country. I have a strong foundation
+					in data structures and algorithms, as well as computer systems and application
+					to real-world problems.
+				</p>
+				<p>
+					My education stretches beyond classes that I took here, as the industry
+					experience has allowed me to develop my skills in an educational capacity
+					as well. You will find that my diverse set of experience allows me to
+					bring a unique perspective to any project that I am working on.
+				</p>
 				<ul class="actions">
-					<li><a href="#" class="button">Learn More</a></li>
+					<li><a href="#header" class="button scrolly">Learn More</a></li>
 				</ul>
 			</div>
 			<a href="#four" class="goto-next scrolly">Next</a>
 		</section>
 
-		<!-- Four: Internships -->
+		<!-- Four: Projects -->
 		<section id="four" class="wrapper style1 special fade-up">
 			<div class="container">
 				<header class="major">
-					<h2>Accumsan sed tempus adipiscing blandit</h2>
-					<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
+					<h2>Internships and Projects</h2>
+					<p>Explore the journey of my career and see where I've made a difference so far.</p>
 				</header>
 				<div class="box alt">
 					<div class="row gtr-uniform">
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span><img src="Media/Coinbase_Logo.jpg" width="50%"></span>
-							<h3>Ipsum sed commodo</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+							<span class="icon solid alt"><img src="Media/Coinbase_Logo.jpg" height="20%"></span>
+							<header>
+								<h3>Software Engineer Intern - Coinbase</h3>
+								<p><i>May - August 2024</i></p>
+							</header>
+							<span style="text-align: justify;">
+								<p>● Joined the fast-paced Blockchain Platform team with a focus on Backend Engineering in
+									Golang<br><br>
+									● Created a cost-benefit analysis tool in the bridging platform to support the ongoing 3rd-party
+									integration initiative<br><br>
+									● Determined the feasibility of internal use of 3rd-party bridges, leading to a drastic 7-day decrease
+									in bridge sweep delay that allowed the team to commit to a new long-term goal they had been unsure of
+									before my project</p>
+							</span>
+							<ul class="actions">
+								<li><a href="#four" class="button scrolly">Learn More</a></li>
+							</ul>
+
 						</section>
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span><img src="Media/AWS_Logo.png" width="40%"></span>
-							<h3>Eleifend lorem ornare</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+							<span class="icon solid alt"><img src="Media/AWS_Logo.png" height="20%"></span>
+							<header>
+								<h3>Software Engineer Intern - Amazon</h3>
+								<p><i>May - August 2023</i></p>
+							</header>
+							<span style="text-align: justify;">
+								<p>● Worked under the User Experience (UX) organization to perform Full Stack Development in
+									Scala/Spark/TypeScript<br><br>
+									● Developed an anomaly detection feature to ensure integrity of a major data migration within an
+									internal reporting tool<br><br>
+									● Designed CloudWatch alarms and an informative QuickSight dashboard to speed up the mitigation of
+									inconsistent data
+								</p>
+							</span>
+							<ul class="actions">
+								<li><a href="#four" class="button scrolly">Learn More</a></li>
+							</ul>
 						</section>
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="icon solid alt major fa-flask"></span>
-							<h3>Cubilia cep lobortis</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+							<span class="icon solid alt"><img src="Media/CU_GeoData_Logo.jpg" height="20%"></span>
+							<header>
+								<h3>Software Developer - CU GeoData</h3>
+								<p><i>Sept 2022 - Dec 2023</i></p>
+							</header>
+							<span style="text-align: justify;">
+								<p>● Trained predictive models and visualized data to tackle local issues such as Harmful Algal Blooms
+									in Cayuga Lake<br><br>
+									● Managed team’s GitHub repository and held public workshops to teach best practices in collaborative
+									programming
+								</p>
+							</span>
+							<ul class="actions">
+								<li><a href="#four" class="button scrolly">Learn More</a></li>
+							</ul>
 						</section>
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="icon solid alt major fa-paper-plane"></span>
-							<h3>Non semper interdum</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+							<span class="icon solid alt"><img src="Media/Crypto_Bridge_Project.jpg" height="20%"></span>
+							<h3>Bridge Quote Simulation</h3>
+							<p>DESCRIBE PROJECT AND IMPACT</p>
 						</section>
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="icon solid alt major fa-file"></span>
-							<h3>Odio laoreet accumsan</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+							<span class="icon solid alt"><img src="Media/Anomaly_Detection_Project.png" height="20%"></span>
+							<h3>Darkroom Anomaly Detection</h3>
+							<p>DESCRIBE PROJECT AND IMPACT</p>
 						</section>
 						<section class="col-4 col-6-medium col-12-xsmall">
-							<span class="icon solid alt major fa-lock"></span>
-							<h3>Massa arcu accumsan</h3>
-							<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+							<span class="icon solid alt"><img src="Media/CamlChess_Project.png" height="20%"></span>
+							<h3>Command Line Chess</h3>
+							<p>DESCRIBE PROJECT AND SKILLS</p>
 						</section>
 					</div>
 				</div>
-				<footer class="major">
+				<!-- <footer class="major">
 					<ul class="actions special">
-						<li><a href="#" class="button">Magna sed feugiat</a></li>
+						<li><a href="#header" class="button scrolly">Check out all my projects!</a></li>
 					</ul>
-				</footer>
+				</footer> -->
 			</div>
 		</section>
 
@@ -188,31 +260,24 @@
 		<section id="five" class="wrapper style2 special fade">
 			<div class="container">
 				<header>
-					<h2>Magna faucibus lorem diam</h2>
-					<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
+					<h2>Thanks for taking the time to learn about me!</h2>
+					<p>I'd love to connect with you! Reach out to me at:</p>
+					<a href="https://www.linkedin.com/in/natantaklilu/" class="button primary">LinkedIn</a></li>
 				</header>
-				<form method="post" action="#" class="cta">
-					<div class="row gtr-uniform gtr-50">
-						<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email"
-								placeholder="Your Email Address" /></div>
-						<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
-					</div>
-				</form>
 			</div>
 		</section>
 
-		<!-- Footer -->
+		<!-- Footer: More navigation linking to other sections-->
 		<footer id="footer">
 			<ul class="icons">
-				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="#header" class="scrolly">Home</a></li>
+				<li><a href="#one" class="scrolly">About Me</a></li>
+				<li><a href="#two" class="scrolly">Experience</a>
+				<li><a href="#three" class="scrolly">Education</a></li>
+				<li><a href="#four" class="scrolly">Projects</a></li>
 			</ul>
 			<ul class="copyright">
-				<li>&copy; Untitled. All rights reserved.</li>
+				<li>&copy; 2024 Natan Aklilu. All rights reserved.</li>
 				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
 		</footer>
