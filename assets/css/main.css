@@ -735,7 +735,7 @@ body.landing.is-preload:after {
 /* Container */
 
 .container {
-	margin: 0 auto;
+	margin: 2em auto;
 	max-width: calc(100% - 4em);
 	width: 70em;
 }
@@ -3132,7 +3132,7 @@ input[type="button"]:disabled,
 	background-position: center center;
 	background-size: cover;
 	box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
-	height: 120vh;
+	height: 100vh;
 	overflow: hidden;
 	position: relative;
 }
@@ -3286,7 +3286,7 @@ input[type="button"]:disabled,
 .spotlight.left .content,
 .spotlight.right .content {
 	height: 101%;
-	padding: 6em 3em;
+	padding: 2em 3em;
 	top: 0;
 	width: 28em;
 }
@@ -3360,7 +3360,7 @@ body.is-touch .spotlight {
 /* Wrapper */
 
 .wrapper {
-	padding: 6em 0 4em 0;
+	padding: 3em 0 4em 0;
 }
 
 .wrapper.style2 {
