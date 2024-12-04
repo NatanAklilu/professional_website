@@ -3,7 +3,7 @@
 
 <head>
 	<title>Natan Aklilu | Home</title>
-	<link rel="icon" href="Media/Website_Icon.jpg">
+	<link rel="icon" href="Media/Website_Icon_No_BG.png">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,7 @@
 
 		<!-- Header -->
 		<header id="header">
-			<h1 id="logo"><a href="index.html" class="scrolly"><img src="Media/Website_Logo.jpg" height="100%"></a></h1>
+			<h1 id="logo"><a href="index.html" class="scrolly"><img src="Media/Website_Logo_No_BG.png" height="100%"></a></h1>
 			<nav id="nav">
 				<ul>
 					<li><a href="#one" class="scrolly">About Me</a></li>
@@ -26,11 +26,9 @@
 					<li>
 						<a href="#four" class="scrolly">Projects ⌵</a>
 						<ul>
-							<!--
-								Will update these links once completed
-							-->
 							<li><a href="Bridge_Quote_Simulation.html" class="scrolly">Bridge Quote Simulation</a></li>
 							<li><a href="Anomaly_Detection.html" class="scrolly">Anomaly Detection</a></li>
+							<li><a href="CU_GeoData.html" class="scrolly">CU GeoData Work</a></li>
 							<li><a href="CamlChess.html" class="scrolly">CamlChess</a></li>
 							<li><a href="https://github.com/NatanAklilu/SpaceInvaders" class="scrolly">Space Invaders</a></li>
 						</ul>
@@ -45,13 +43,25 @@
 			<div class="content">
 				<header>
 					<h2 style="text-align:center; font-size:4em;">Natan Aklilu</h2>
-					<p class="typed-out" style="text-align:center; font-size:2em;">Software Engineer <b
-							style="font-size:1.3em;">|</b> Cornell CS</p>
+					<p class="typed-out" style="text-align:center; font-size:2em;">Software Engineer <span
+							style="font-size:1.3em; font-weight: 300;">|</span> Cornell CS</p>
 					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/natantaklilu/" class="icon brands alt fa-linkedin-in"><span
-									class="label" style="text-align:center;">LinkedIn</span></a></li>
-						<li><a href="https://github.com/NatanAklilu" class="icon brands alt fa-github"><span
-									class="label">GitHub</span></a></li>
+						<li style="font-size:1.4em">
+							<span class="icon-wrapper">
+								<a href="https://www.linkedin.com/in/natantaklilu/" class="icon brands alt fa-linkedin-in">
+									<!-- <div class="icon-text-box"><span class="icon-text">LinkedIn</span></div> -->
+								</a>
+								<p>LinkedIn</p>
+							</span>
+						</li>
+						<li style="font-size:1.4em">
+							<span class="icon-wrapper">
+								<a href="https://github.com/NatanAklilu" class="icon brands alt fa-github">
+								</a>
+								<p>GitHub</p>
+							</span>
+							<!-- <div class="icon-text-box"><span class="icon-text">GitHub</span></div> -->
+						</li>
 					</ul>
 				</header>
 				<span class="image"><img src="Media/Natan_Aklilu_Headshot_Square.jpg" alt="" /></span>
@@ -59,10 +69,52 @@
 			<a href="#one" class="goto-next scrolly">Next</a>
 		</section>
 
+		<!-- REVISIT THIS (Would be tricky on mobile though) -->
+		<!-- Using some Javascript to add fading dropdown menu (instead of "Scroll to Top" button)-->
+
+		<!-- <script>
+			const navbar = document.getElementById("header");
+
+			// Function to show or hide the navbar based on mouse position
+			window.addEventListener("mousemove", function (event) {
+				// Get the top of the current viewport (visible screen area)
+				const viewportTop = window.scrollY;
+				const y_pos = event.clientY;
+
+				// Check if either user is at top of page or mouse is in navbar portion of the viewport
+				if (viewportTop == 0 || (viewportTop <= y_pos && y_pos <= viewportTop + navbar.offsetHeight)) {
+					navbar.style.top = viewportTop;
+					navbar.style.opacity = "1"; // Fade in the navbar
+				} else {
+					navbar.style.opacity = "0"; // Fade out the navbar
+				}
+			});
+
+			// When the page is scrolled
+			// window.addEventListener("scroll", function () {
+			//	if (window.scrollY > 100) {
+			//		navbar.style.opacity = "0"; // Fade out the navbar
+			//	} else {
+			//		navbar.style.opacity = "1"; // Keep the navbar visible
+			//	}
+			//});
+
+			// When hovering over the top section (or navbar itself)
+			//navbar.addEventListener("mousemove", function (event) {
+			//	if (event.clientY < 50) {
+			//		navbar.style.opacity = "1"; // Fade in when hovering over the navbar
+			//	} else {
+			//		navbar.style.opacity = "0"; // Fade out again when not hovering
+			//	}
+			//});
+
+		</script> -->
+
 		<!-- Adding a button to help bring user to top of page (using some Javascript)-->
 
 		<div>
-			<a href="#banner" id="scroll_up_btn" class="button primary scrolly" title="Scroll to top">Top</a>
+			<a href="#banner" id="scroll_up_btn" class="button primary scrolly" title="Scroll to top"
+				style="padding:0 0.5em;">Scroll to Top</a>
 			<script>// Get the button:
 				let mybutton = document.getElementById("scroll_up_btn");
 
@@ -94,10 +146,9 @@
 					<p>It's nice to meet you.</p>
 				</header>
 				<p>
-					I am currently a <b style="color:orange">senior</b> studying Computer Science at <b
-						style="color:orange">Cornell University</b> and will be graduating in
-					<b style="color:orange">May 2025</b>. I am looking for full-time Software
-					Engineering positions starting in <b style="color:orange">Fall 2025</b>!
+					I am currently a <b>senior</b> studying Computer Science at <b>Cornell University</b>
+					and will be graduating in <b>May 2025</b>. I am looking for full-time Software
+					Engineering positions starting in <b>Fall 2025</b>!
 					My interests in software lean toward backend development, and I love working
 					on teams with passionate engineers while adapting to new technologies in this fast-paced industry.
 				</p>
@@ -120,16 +171,16 @@
 					<h2>Educational Background</h2>
 					<p>What do I bring to the table?</p>
 				</header>
-				<p>I will graduate with a <b style="color:orange">Bachelor's degree in Computer Science</b>
+				<p>I will graduate with a <b>Bachelor's degree in Computer Science</b>
 					from Cornell's College of Engineering in May 2025. This academic experience has given me
-					a strong foundation in <b style="color:orange">data structures</b>, <b style="color:orange">algorithms</b>,
-					and <b style="color:orange">computer systems</b> along with real-world applications of all these core
+					a strong foundation in <b>data structures</b>, <b>algorithms</b>,
+					and <b>computer systems</b> along with real-world applications of all these core
 					concepts.
 				</p>
 				<p>
 					My education stretches beyond completed courses, as my industry
 					experience has allowed me to develop my skills even further. You will find
-					that my diverse set of experiences allows me to bring a <b style="color:orange">unique perspective</b>
+					that my diverse set of experiences allows me to bring a <b>unique perspective</b>
 					to any project I am a part of.
 				</p>
 				<div style="display: flex;justify-content: center; align-items: center;">
@@ -150,33 +201,33 @@
 				</header>
 				<p>
 					Let me take you on a journey through my career so far. Highlights include
-					my time on Cornell's project team <b style="color:orange">CU GeoData</b>
+					my time on Cornell's project team <b>CU GeoData</b>
 					which brought skills such as data analysis and visualization, a Software
-					Engineering internship at <b style="color:orange">Amazon</b>
+					Engineering internship at <b>Amazon</b>
 					where I dove deep into the AWS tech stack to complete an impactful project,
-					and another SWE internship at <b style="color:orange">Coinbase</b> this
+					and another SWE internship at <b>Coinbase</b> this
 					past summer that exposed me to a world of new technologies and the power
 					of iterative development!
 				</p>
-				<!-- <p>Let me take you on a trip through my time as a member of <b style="color:orange">CU GeoData</b> where I
+				<!-- <p>Let me take you on a trip through my time as a member of <b>CU GeoData</b> where I
 					developed
 					my data analysis skills and learned the useful process of iterative development of
 					a software project.
 				</p>
 				<p>
 					From there, I will take you into my first taste of the industry as a Software Engineer
-					Intern at <b style="color:orange">Amazon Web Services</b> where I dove deep into the AWS tech stack to work on
+					Intern at <b>Amazon Web Services</b> where I dove deep into the AWS tech stack to work on
 					an
 					impactful project. I then steered my journey towards Mountain View this past summer with a
-					<b style="color:orange">Coinbase</b> Software Engineering Internship and here I am today!
+					<b>Coinbase</b> Software Engineering Internship and here I am today!
 				</p> -->
 				<p>
-					Learn more about my professional experience by exploring the timeline below!
-					<b style="color:orange">Hover over the different sections</b> to discover
-					my work over the years.
+					Dive into my professional experience by exploring the timeline below!
+					<b>Hover over the different years</b> to discover what
+					I have been up to.
 				</p>
 				<ul class="actions" style="display: flex;justify-content: center; align-items: center;">
-					<li><a href="#four" class="button scrolly">Timeline</a></li>
+					<li><a href="#four" class="button scrolly">Career Timeline</a></li>
 				</ul>
 			</div>
 			<a href="#four" class="goto-next scrolly">Next</a>
@@ -377,8 +428,20 @@
 					</div>
 
 					<div class="tl-content">
-						<h1 class="f3 text--accent ttu" style="color: red">Cornell Freshman Year</h1>
-						<p>Here's when I started school at Cornell University in Ithaca.</p>
+						<h1 class="f3 text--accent ttu" style="color: moccasin">Cornell CS Student</h1>
+						<p style="margin: 0;">
+							Throughout my time exploring Cornell's CS curriculum (2021-2025), I have worked on several hands-on
+							projects including a Python implementation of the arcade game Space Invaders along with
+							terminal-based multiplayer chess in OCaml (conveniently named CamlChess). Learn about how
+							these projects helped me grow as a developer!
+						</p>
+						<div style="display: flex; justify-content: center; align-items: center;">
+							<ul class="actions" style="position: relative; bottom: 0;">
+								<li><a href="CamlChess.html" class="button scrolly">CamlChess</a></li>
+								<li><a href="https://github.com/NatanAklilu/SpaceInvaders" class="button scrolly">Space Invaders</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 
 				</div>
@@ -386,31 +449,37 @@
 		</section>
 
 		<!-- Five: Connect with me! -->
-		<section id="five" class="wrapper style2 special fade">
+		<!-- <section id="five" class="wrapper style2 special fade">
 			<div class="container">
 				<header>
 					<h2>Thanks for taking the time to learn about me!</h2>
 					<p>I'd love to connect with you! Reach out to me at:</p>
 					<a href="https://www.linkedin.com/in/natantaklilu/" class="button primary">LinkedIn</a></li>
-					<!-- <a href="https://www.linkedin.com/in/natantaklilu/" class="icon brands alt fa-linkedin-in"><span class="label"
-							style="text-align:center;">LinkedIn</span></a> -->
+					<a href="https://www.linkedin.com/in/natantaklilu/" class="icon brands alt fa-linkedin-in"><span class="label"
+							style="text-align:center;">LinkedIn</span></a>
 				</header>
 			</div>
-		</section>
+		</section> -->
 
 		<!-- Footer: More navigation linking to other sections-->
 		<footer id="footer">
-			<ul class="icons">
+			<ul class="footer-links">
 				<li><a href="#header" class="scrolly">Home</a></li>
-				<li><a href="#one" class="scrolly">About Me</a></li>
-				<li><a href="#two" class="scrolly">Education</a>
-				<li><a href="#three" class="scrolly">Experience</a></li>
+				<li><a href="#one" class="scrolly">About</a></li>
 				<li><a href="#four" class="scrolly">Projects</a></li>
+				<!-- Add animation of LinkedIn logo popping out when hovering -->
+				<li><a href="https://www.linkedin.com/in/natantaklilu/" class="contact">Contact</a></li>
 			</ul>
-			<ul class="copyright">
-				<li>&copy; 2024 Natan Aklilu. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
+
+			<!-- Center: Logo Image -->
+			<div class="footer-logo">
+				<a href="#banner" class="scrolly"><img src="Media/Website_Logo_No_BG.png" height="70em"></a>
+			</div>
+
+			<!-- Right: Copyright Information -->
+			<div class="footer-copyright">
+				&copy; 2024 Natan Aklilu. All rights reserved.
+			</div>
 		</footer>
 
 	</div>
