@@ -7,6 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/flickity.css">
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
@@ -131,25 +132,25 @@
           </div>
         </div>
 
-        <h3 style="text-align: center">CU GeoData Experience Gallery</h3>
-        <section>
-          <div class="box alt">
-            <div class="row gtr-50 gtr-uniform">
-              <div class="col-4 col-6-xsmall"><span class="image fit"><img src="Media/CU_GeoData_Water_Team_Poster.png"
-                    alt="" /></span>
-              </div>
-              <div class="col-4 col-6-xsmall"><span class="image fit"><img src="Media/CU_GeoData_Water_Data_Poster.jpg"
-                    alt="" /></span>
-              </div>
-              <div class="col-4 col-6-xsmall"><span class="image fit"><img
-                    src="Media/CU_GeoData_Water_Team_Group_Pic.jpeg" alt="" /></span>
-              </div>
-              <div class="col-12"><span class="image fit"><img src="Media/CU_GeoData_Article.jpg" alt="" /></span>
-              </div>
-            </div>
-          </div>
+        <h2 style="text-align: center;">CU GeoData Experience Gallery</h2>
 
-        </section>
+        <!-- Gallery Slideshow -->
+
+        <div class="carousel js-flickity" data-flickity-options='{ "wrapAround": true }'>
+          <div class="carousel-cell">
+            <img src="Media/CU_GeoData_Water_Team_Poster.png" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="Media/CU_GeoData_Water_Data_Poster.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="Media/CU_GeoData_Water_Team_Group_Pic.jpeg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="Media/CU_GeoData_Article.jpg" alt="" />
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -184,6 +185,7 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/flickity.pkgd.js"></script>
 
 </body>
 

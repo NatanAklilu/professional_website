@@ -2444,6 +2444,7 @@ footer.major {
 	z-index: 1;
 	border-top: 3px solid #fff;
 	border-bottom: 3px solid #fff;
+	text-shadow: 2px 2px 0px rgb(88, 88, 88);
 }
 
 .tl-year p {
@@ -2657,10 +2658,6 @@ input[type="radio"]+label:before {
 	color: rgba(255, 255, 255, 0.5) !important;
 	opacity: 1.0;
 }
-
-/* Slideshow Animation for Gallery */
-
-
 
 /* Box */
 
@@ -4747,4 +4744,47 @@ body.is-touch #banner {
 #sidebar ul li::after {
 	left: 0.5em;
 	margin-right: -50%;
+}
+
+/* Slideshow Animation for Gallery */
+
+*/ .carousel {
+	padding: 0;
+}
+
+.carousel-cell {
+	width: 70%;
+	height: 500px;
+	/* flex-box, center image in cell */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.carousel-cell img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	/* dim unselected */
+	opacity: 0.7;
+	-webkit-transform: scale(0.85);
+	transform: scale(0.85);
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+	transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+}
+
+/* brighten selected image */
+.carousel-cell.is-selected img {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-filter: none;
+	filter: none;
 }
