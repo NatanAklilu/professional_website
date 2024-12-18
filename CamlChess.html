@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Natan Aklilu | CamlChess</title>
+  <link rel="icon" href="Media/Website_Icon_No_BG.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+</head>
+
+<body class="is-preload landing">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <h1 id="logo"><a href="index.html" class="scrolly"><img src="Media/Website_Logo_No_BG.png" height="100%"></a></h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html#one" class="scrolly">About Me</a></li>
+          <li><a href="index.html#two" class="scrolly">Education</a>
+          <li><a href="index.html#three" class="scrolly">Experience</a></li>
+          <li>
+            <a href="index.html#four" class="scrolly">Projects ⌵</a>
+            <ul>
+              <!--
+								Will update these links once completed
+							-->
+              <li><a href="Bridge_Quote_Simulation.html" class="scrolly">Bridge Quote Simulation</a></li>
+              <li><a href="Anomaly_Detection.html" class="scrolly">Anomaly Detection</a></li>
+              <li><a href="CU_GeoData.html" class="scrolly">CU GeoData Work</a></li>
+              <li><a href="#" class="scrolly">CamlChess</a></li>
+              <li><a href="https://github.com/NatanAklilu/SpaceInvaders" class="scrolly">Space Invaders</a></li>
+            </ul>
+          </li>
+          <li><a href="Media/Natan_Aklilu_Resume_2025.pdf" download class="button primary">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Adding a button to help bring user to top of page (using some Javascript)-->
+
+    <div>
+      <a href="#main" id="scroll_up_btn" class="button primary scrolly" title="Scroll to top">Scroll to Top</a>
+      <script>// Get the button:
+        let mybutton = document.getElementById("scroll_up_btn");
+
+        // When the user scrolls down 30px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+        } </script>
+    </div>
+
+    <!-- Main -->
+    <div id="main" class="wrapper style1">
+      <div class="container">
+        <header class="major">
+          <h2>CamlChess</h2>
+          <p>CS 3110 Final Project (Fall 2022)</p>
+        </header>
+        <div class="row gtr-150">
+          <div class="col-4 col-12-medium">
+
+            <!-- Sidebar -->
+            <section id="sidebar">
+              <section>
+                <span class="image fit"><img src="Media/CamlChess_Project.png" alt="" /></span>
+                <h3>Command Line Chess</h3>
+                <p>This was a group project for the final of the Cornell core CS course
+                  CS 3110: Functional Programming and Data Structures. The final result is
+                  a fully functional, command-line chess game with features such as a graveyard,
+                  move history, and even the option to face an AI opponent.</p>
+              </section>
+              <h3>Skills & Tools</h3>
+              <ul>
+                <li><b>Programming Languages</b></li>
+                <span class="button-77">OCaml</span>
+                <li><b>Tools</b></li>
+                <span class="button-77">Git</span>
+                <span class="button-77">Terminal</span>
+              </ul>
+            </section>
+
+          </div>
+          <div class="col-8 col-12-medium imp-medium">
+
+            <!-- Content -->
+            <section id="content">
+              <span class="image fit"><img src="Media/Chess_Image.jpg" alt="" /></span>
+              <h3>Takeaways</h3>
+              <ul>
+                <li><b>Collaborative Development</b>: This project required diligent effort over months across four team
+                  members. The journey to the final deliverable taught me important lessons including
+                  frequent communication, best practices with Git, and effective problem-solving in the
+                  face of challenges. These are skills that I have been able to apply to future projects and
+                  was especially helpful in preparing me for my internships.</li>
+              </ul>
+              <ul>
+                <li><b>Time Management</b>: Our group outlined a set of goals early on which helped us
+                  align our priorities over the course of the semester. I learned the importance of
+                  consistently meeting deliverables and the value of continuous feedback from team members
+                  which has echoed through my industry experience as well.</li>
+              </ul>
+              <br>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="text-align: center;">Embedded Command Line Chess</h2>
+    <div style="text-align: center; padding-bottom: 2em;">
+      <p style="text-align: center;">Coming Soon - <a href=" https://github.com/NatanAklilu/CamlChess">Link to GitHub
+          repository</a>.
+        Here is a video of a full chess game for now. Watch as the chess board updates with each move:
+      </p>
+      <video width="60%" height="60%" controls muted>
+        <source src="Media/Full_Chess_Match_Example.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Footer: More navigation linking to other sections-->
+    <footer id="footer">
+      <ul class="footer-links">
+        <li><a href="index.html#header" class="scrolly">Home</a></li>
+        <li><a href="index.html#one" class="scrolly">About</a></li>
+        <li><a href="index.html#four" class="scrolly">Projects</a></li>
+        <li><a href="https://www.linkedin.com/in/natantaklilu/" class="contact">Contact</a></li>
+      </ul>
+
+      <!-- Center: Logo Image -->
+      <div class="footer-logo">
+        <a href="index.html#banner" class="scrolly"><img src="Media/Website_Logo_No_BG.png" height="70em"></a>
+      </div>
+
+      <!-- Right: Copyright Information -->
+      <div class="footer-copyright">
+        &copy; 2024 Natan Aklilu. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
