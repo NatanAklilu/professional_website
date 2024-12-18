@@ -90,11 +90,11 @@ https://flickity.metafizzy.co
 }
 
 .flickity-prev-next-button.previous {
-  left: 5%;
+  left: 10%;
 }
 
 .flickity-prev-next-button.next {
-  right: 5%;
+  right: 10%;
 }
 
 /* right to left */
