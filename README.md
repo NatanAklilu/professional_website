@@ -1,3 +1,5 @@
-# Hello there! I'm Natan.
+## Hey there! I'm Natan, a Cornell CS graduate and Backend Software Engineer!
 
-### Here is my [professional website!](https://natanaklilu.github.io/professional_website/) where you can learn more about me! Please feel free to reach out to me at my [LinkedIn](https://www.linkedin.com/in/natantaklilu/) with any questions, concerns, or suggestions. In the meantime, I hope you enjoy exploring my website!
+Check out my personal website [here](https://natanaklilu.github.io/professional_website/) built with **HTML**, **CSS**, and **JavaScript.**
+
+Feel free to connect on [LinkedIn](https://www.linkedin.com/in/natantaklilu/) or open an issue with any feedback!
