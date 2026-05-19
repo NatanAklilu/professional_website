@@ -2351,19 +2351,19 @@ footer.major {
 
 #timeline {
 	display: flex;
+	align-items: stretch;
 	background-color: #031625;
 }
 
 #timeline:hover .tl-item {
-	width: 23.3333%;
+	width: 15%;
 }
 
 .tl-item {
 	transform: translate3d(0, 0, 0);
 	position: relative;
-	width: 25%;
-	height: 100vh;
-	min-height: 600px;
+	width: 20%;
+	min-height: max(42rem, 100dvh);
 	color: #fff;
 	overflow: hidden;
 	transition: width 0.5s ease;
@@ -2387,7 +2387,7 @@ footer.major {
 }
 
 .tl-item:before {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 75%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 48%, rgba(0, 0, 0, 1) 100%);
 	z-index: 1;
 	opacity: 0;
 	transform: translate3d(0, 0, 0) translateY(50%);
@@ -2395,7 +2395,7 @@ footer.major {
 }
 
 .tl-item:hover {
-	width: 30% !important;
+	width: 40% !important;
 }
 
 .tl-item:hover:after {
@@ -2420,20 +2420,46 @@ footer.major {
 
 .tl-content {
 	transform: translate3d(0, 0, 0) translateY(25px);
-	position: relative;
-	z-index: 1;
+	position: absolute;
+	top: 52%;
+	right: 0;
+	left: 0;
+	z-index: 2;
 	text-align: center;
 	margin: 1em 1.618em;
-	top: 55%;
+	padding: 0;
 	opacity: 0;
+	box-sizing: border-box;
 }
 
 .tl-content h1 {
 	font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	color: #1779cf;
-	font-size: 1.44rem;
+	font-size: 2rem;
 	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+.tl-content p {
+	margin-bottom: 0;
+}
+
+.tl-content > div {
+	margin-top: 0.75em;
+	width: 100%;
+}
+
+.tl-content .actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5em;
+	margin: 0;
+}
+
+.tl-content .actions li {
+	padding: 0;
 }
 
 .tl-year {
@@ -2445,6 +2471,12 @@ footer.major {
 	border-top: 3px solid #fff;
 	border-bottom: 3px solid #fff;
 	text-shadow: 2px 2px 0px rgb(88, 88, 88);
+	transition: opacity 0.35s ease;
+	pointer-events: none;
+}
+
+.tl-item:hover .tl-year {
+	opacity: 0;
 }
 
 .tl-year p {
@@ -2465,6 +2497,32 @@ footer.major {
 	background-position: center center;
 	transition: filter 0.5s ease;
 	/* filter: brightness(110%); */
+}
+
+/* Shorter viewports: tighter padding while preserving enough panel height */
+@media screen and (max-height: 820px) {
+	.tl-item {
+		min-height: max(42rem, 100dvh);
+	}
+
+	.tl-content {
+		padding: 1.5em 1em 1.25em;
+	}
+
+	.tl-content h1 {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.tl-content h1 {
+		font-size: 1.25rem;
+	}
+
+	.tl-content .actions .button {
+		font-size: 0.85em;
+		padding: 0 1em;
+	}
 }
 
 
@@ -3682,6 +3740,20 @@ input[type="button"]:disabled,
 .spotlight.right .content {
 	border-left-width: 0.35em;
 	right: 0;
+}
+
+#three.spotlight {
+	height: auto;
+	min-height: 100vh;
+	overflow: visible;
+}
+
+#three.spotlight .content {
+	box-sizing: border-box;
+	height: auto;
+	margin-left: auto;
+	min-height: 100vh;
+	position: relative;
 }
 
 .spotlight.style1 .content {
