@@ -169,6 +169,7 @@ html {
 html,
 body {
 	background: #1c1d26;
+	overflow-x: hidden;
 }
 
 body.is-preload *,
