@@ -2,11 +2,12 @@
 <html>
 
 <head>
-  <title>Natan Aklilu | CamlChess</title>
+  <title>Natan Aklilu | Tax Lot Split</title>
   <link rel="icon" href="Media/Website_Icon_No_BG.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/flickity.css">
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
@@ -34,10 +35,10 @@
           <li>
             <a href="index.html#four" class="scrolly">Projects ⌵</a>
             <ul>
-              <li><a href="Tax_Lot_Split.html" class="scrolly">Tax Lot Split</a></li>
+              <li><a href="#" class="scrolly">Tax Lot Split</a></li>
               <li><a href="Bridge_Quote_Simulation.html" class="scrolly">Bridge Quote Simulation</a></li>
               <li><a href="Anomaly_Detection.html" class="scrolly">Anomaly Detection</a></li>
-              <li><a href="#" class="scrolly">CamlChess</a></li>
+              <li><a href="CamlChess.html" class="scrolly">CamlChess</a></li>
               <li><a href="https://github.com/NatanAklilu/SpaceInvaders" class="scrolly">Space Invaders</a></li>
             </ul>
           </li>
@@ -74,10 +75,10 @@
 
     <!-- Main -->
     <div id="main" class="wrapper style1">
-      <div class="container">
+      <div class="container" style="margin-bottom: 0;">
         <header class="major">
-          <h2>CamlChess</h2>
-          <p>CS 3110 Final Project (Fall 2022)</p>
+          <h2>Tax Lot Split &amp; Selection APIs</h2>
+          <p>Coinbase SWE Project (2025 – 2026)</p>
         </header>
         <div class="row gtr-150">
           <div class="col-4 col-12-medium">
@@ -85,20 +86,25 @@
             <!-- Sidebar -->
             <section id="sidebar">
               <section>
-                <span class="image fit"><img src="Media/CamlChess_Project.png" alt="" /></span>
-                <h3>Command Line Chess</h3>
-                <p>This was a group project for the final of the Cornell core CS course
-                  CS 3110: Functional Programming and Data Structures. The final result is
-                  a fully functional, command-line chess game with features such as a graveyard,
-                  move history, and even the option to face an AI opponent.</p>
+                <span class="image fit"><img src="Media/Coinbase_Logo_5.jpg" alt="" /></span>
+                <h3>Cost-Basis Tracking at Coinbase</h3>
+                <p><b>Tax lot accounting</b> is how financial institutions track the cost basis
+                  of assets for tax reporting. In crypto, where assets are frequently bought,
+                  sold, and transferred across wallets and chains, accurate lot tracking is
+                  critical. Coinbase's <b>Transaction Intelligence</b> team owns this
+                  infrastructure — ensuring every user's gain/loss calculations are precise
+                  and compliant.</p>
               </section>
               <h3>Skills & Tools</h3>
               <ul>
                 <li><b>Programming Languages</b></li>
-                <span class="button-77">OCaml</span>
+                <span class="button-77">Golang</span>
+                <span class="button-77">SQL</span>
                 <li><b>Tools</b></li>
+                <span class="button-77">gRPC APIs</span>
+                <span class="button-77">Datadog</span>
+                <span class="button-77">Temporal</span>
                 <span class="button-77">Git</span>
-                <span class="button-77">Terminal</span>
               </ul>
             </section>
 
@@ -107,20 +113,38 @@
 
             <!-- Content -->
             <section id="content">
-              <span class="image fit"><img src="Media/Chess_Image.jpg" alt="" /></span>
+              <h3>Project Description</h3>
+              <p>
+                The Tax Lot Split and Selection APIs were my primary project as a full-time
+                Software Engineer on Coinbase's <b>Transaction Intelligence</b> team. Tax lots
+                represent individual units of an asset acquired at a specific cost and time —
+                and when a user liquidates crypto holdings, the <b>selection of which lots to sell</b>
+                directly determines their taxable gain or loss.
+              </p>
+              <p>
+                I designed and implemented two core APIs: the <b>Tax Lot Split API</b>, which
+                handles the division of existing lots when partial liquidations occur, and the
+                <b>Tax Lot Selection API</b>, which enables flexible, user-configured strategies
+                for choosing which lots to sell (e.g. FIFO, LIFO, highest-cost-first). Together,
+                these APIs enabled <b>accurate cost-basis tracking and flexible liquidation</b>
+                for all Coinbase users — a meaningful improvement to the financial accuracy
+                of the platform.
+              </p>
+              <p>
+                I owned the <b>full feature lifecycle</b> — from technical design and API
+                specification through Golang implementation, testing, production rollout, and
+                post-launch observability via Datadog dashboards. Given the financial sensitivity
+                of the feature, correctness and reliability were paramount throughout.
+              </p>
               <h3>Takeaways</h3>
               <ul>
-                <li><b>Collaborative Development</b>: This project required diligent effort over months across four team
-                  members. The journey to the final deliverable taught me important lessons including
-                  frequent communication, best practices with Git, and effective problem-solving in the
-                  face of challenges. These are skills that I have been able to apply to future projects and
-                  was especially helpful in preparing me for my internships.</li>
-              </ul>
-              <ul>
-                <li><b>Time Management</b>: Our group outlined a set of goals early on which helped us
-                  align our priorities over the course of the semester. I learned the importance of
-                  consistently meeting deliverables and the value of continuous feedback from team members
-                  which has echoed through my industry experience as well.</li>
+                <li><b>Financial Engineering Precision</b>: Working on tax-sensitive infrastructure
+                  demands a level of correctness that goes beyond typical software. I developed
+                  strong habits around edge case analysis, thorough testing, and conservative
+                  rollout strategies.</li>
+                <li><b>API Design</b>: Designing APIs consumed by multiple internal teams required
+                  careful thinking about contracts, backwards compatibility, and clear documentation
+                  — skills that will carry into every future project I work on.</li>
               </ul>
               <br>
             </section>
@@ -130,17 +154,20 @@
       </div>
     </div>
 
-    <h2 style="text-align: center;">Command Line Chess Gameplay</h2>
-    <div style="text-align: center; padding-bottom: 2em;">
-      <p style="text-align: center;">
-        Here is a video of a full chess game. Note that this is played in local mode, 
-        but you can choose to play against the AI opponent during initial game setup! 
-        All code can be found in the GitHub repository <a href="https://github.com/NatanAklilu/CamlChess">here</a>!
-        Watch as the chess board and move history update with each move:
-      </p>
-      <video width="60%" height="60%" controls muted>
-        <source src="Media/Full_Chess_Match_Example.mp4" type="video/mp4">
-      </video>
+    <h2 style="text-align: center;">Coinbase Experience Gallery</h2>
+
+    <!-- Gallery Slideshow -->
+
+    <div class="carousel js-flickity" data-flickity-options='{ "wrapAround": true }' style="padding: 0px;">
+      <div class="carousel-cell">
+        <img src="Media/Coinbase_Group_Pic_Resized.jpg" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="Media/Coinbase_Office.jpg" alt="" />
+      </div>
+      <div class="carousel-cell">
+        <img src="Media/Coinbase_SF_Office.jpg" alt="" />
+      </div>
     </div>
 
     <!-- Footer: More navigation linking to other sections-->
@@ -174,6 +201,7 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/flickity.pkgd.js"></script>
 
 </body>
 
