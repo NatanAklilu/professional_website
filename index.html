@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 
 <head>
@@ -16,35 +16,7 @@
 	<div id="page-wrapper">
 
 		<!-- Header -->
-		<header id="header">
-			<h1 id="logo"><a href="index.html" class="scrolly"><img src="Media/Website_Logo_No_BG.png" height="100%"></a></h1>
-			<nav id="nav">
-				<ul>
-					<li><a href="#one" class="scrolly">About Me</a></li>
-					<li><a href="#two" class="scrolly">Education</a></li>
-					<li>
-						<a href="#three" class="scrolly">Experience ⌵</a>
-						<ul>
-							<li><a href="Coinbase.html" class="scrolly">Coinbase</a></li>
-							<li><a href="Amazon.html" class="scrolly">Amazon</a></li>
-							<li><a href="CU_GeoData.html" class="scrolly">CU GeoData</a></li>
-							<li><a href="Cornell_TA.html" class="scrolly">Cornell TA</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#four" class="scrolly">Projects ⌵</a>
-						<ul>
-							<li><a href="Tax_Lot_Split.html" class="scrolly">Tax Lot Split</a></li>
-							<li><a href="Bridge_Quote_Simulation.html" class="scrolly">Bridge Quote Simulation</a></li>
-							<li><a href="Anomaly_Detection.html" class="scrolly">Anomaly Detection</a></li>
-							<li><a href="CamlChess.html" class="scrolly">CamlChess</a></li>
-							<li><a href="https://github.com/NatanAklilu/SpaceInvaders" class="scrolly">Space Invaders</a></li>
-						</ul>
-					</li>
-					<li><a href="Media/Natan_Aklilu_Resume_2026.pdf" download class="button primary">Resume</a></li>
-				</ul>
-			</nav>
-		</header>
+		<site-nav data-page="index"></site-nav>
 
 		<!-- Banner: Home -->
 		<section id="banner">
@@ -315,31 +287,13 @@
 			</section>
 		</section>
 
-		<!-- Footer: More navigation linking to other sections-->
-		<footer id="footer">
-			<ul class="footer-links">
-				<li><a href="#header" class="scrolly">Home</a></li>
-				<li><a href="#one" class="scrolly">About</a></li>
-				<li><a href="#three" class="scrolly">Experience</a></li>
-				<li><a href="#four" class="scrolly">Projects</a></li>
-				<!-- Add animation of LinkedIn logo popping out when hovering -->
-				<li><a href="https://www.linkedin.com/in/natantaklilu/" class="contact">Contact</a></li>
-			</ul>
-
-			<!-- Center: Logo Image -->
-			<div class="footer-logo">
-				<a href="#banner" class="scrolly"><img src="Media/Website_Logo_No_BG.png" height="70em"></a>
-			</div>
-
-			<!-- Right: Copyright Information -->
-			<div class="footer-copyright">
-				&copy; 2026 Natan Aklilu. All rights reserved.
-			</div>
-		</footer>
+		<!-- Footer -->
+		<site-footer data-page="index"></site-footer>
 
 	</div>
 
 	<!-- Scripts -->
+	<script src="assets/js/components.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>
