@@ -4209,8 +4209,11 @@ body.is-touch #banner {
 .footer-links {
 	display: flex;
 	list-style: none;
-	margin: 0 0;
+	margin: 0;
 	padding: 0;
+	flex: 1;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .footer-links li {
@@ -4233,13 +4236,19 @@ body.is-touch #banner {
 
 /* Styling for the centered image */
 .footer-logo {
-	text-align: center;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Styling for the right copyright */
 .footer-copyright {
+	flex: 1;
 	font-size: 1em;
-	text-align: right;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 	margin-right: 2em;
 }
 
