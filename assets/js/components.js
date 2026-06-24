@@ -32,13 +32,13 @@
               <li><a href="${p}#one" class="scrolly">About Me</a></li>
               <li><a href="${p}#two" class="scrolly">Education</a></li>
               <li>
-                <a href="${p}#three" class="scrolly">Experience &#8964;</a>
+                <a href="${p}#three" class="scrolly">Experience &#9013;</a>
                 <ul>
                   ${expLinks.map(li).join('\n                  ')}
                 </ul>
               </li>
               <li>
-                <a href="${p}#four" class="scrolly">Projects &#8964;</a>
+                <a href="${p}#four" class="scrolly">Projects &#9013;</a>
                 <ul>
                   ${projLinks.map(li).join('\n                  ')}
                 </ul>
