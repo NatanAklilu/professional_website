@@ -47,6 +47,81 @@
 			<a href="#one" class="goto-next scrolly">Next</a>
 		</section>
 
+		<script>
+		(function () {
+			if (!window.matchMedia('(hover: hover)').matches) return;
+			if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+			var banner = document.getElementById('banner');
+			var trailPool = [
+				{ type: 'text', content: 'Golang' },
+				{ type: 'text', content: 'AWS' },
+				{ type: 'text', content: 'TypeScript' },
+				{ type: 'text', content: 'Scala' },
+				{ type: 'text', content: 'Python' },
+				{ type: 'text', content: 'OCaml' },
+				{ type: 'text', content: 'Java' },
+				{ type: 'text', content: 'gRPC' },
+				{ type: 'text', content: 'Datadog' },
+				{ type: 'text', content: 'MongoDB' },
+				{ type: 'text', content: 'SageMaker' },
+				{ type: 'text', content: 'Temporal' },
+				{ type: 'text', content: 'Kubernetes' },
+				{ type: 'text', content: 'S3' },
+				{ type: 'text', content: 'Cursor' },
+				{ type: 'text', content: 'Claude' },
+				{ type: 'text', content: 'Git' },
+				{ type: 'text', content: 'Protobuf' },
+				{ type: 'text', content: 'SQL' },
+				{ type: 'text', content: 'Backend Engineer' },
+				{ type: 'text', content: '300+ Students' },
+				{ type: 'text', content: '4 Projects' },
+				{ type: 'text', content: 'Production Systems' },
+				{ type: 'text', content: 'Snowflake' },
+				{ type: 'text', content: 'Spark' },
+				{ type: 'text', content: '7 days \u2192 1 min' },
+				{ type: 'text', content: 'Millions of Users' },
+				{ type: 'img', src: 'Media/AWS_Logo.png' },
+				{ type: 'img', src: 'Media/Coinbase_Logo.jpg' },
+				{ type: 'img', src: 'Media/Cornell_University_Logo.png' },
+				{ type: 'img', src: 'Media/CU_GeoData_Logo.jpg' },
+				{ type: 'img', src: 'Media/Coinbase_Group_Pic.jpg' },
+				{ type: 'img', src: 'Media/Coinbase_Crypto_Stock_Pic.jpg' },
+				{ type: 'img', src: 'Media/Coinbase_Office.jpg' },
+				{ type: 'img', src: 'Media/Amazon_Bonding_Event.jpg' },
+				{ type: 'img', src: 'Media/CU_GeoData_Data_Team_Pic.jpg' }
+			];
+			var lastX = -999, lastY = -999, minDist = 100;
+
+			banner.addEventListener('mousemove', function (e) {
+				var rect = banner.getBoundingClientRect();
+				var x = e.clientX - rect.left;
+				var y = e.clientY - rect.top;
+				if (Math.hypot(x - lastX, y - lastY) < minDist) return;
+				lastX = x; lastY = y;
+
+				var item = trailPool[Math.floor(Math.random() * trailPool.length)];
+				var el = document.createElement('span');
+
+				if (item.type === 'img') {
+					el.className = 'cursor-trail-item cursor-trail-img-item';
+					var img = document.createElement('img');
+					img.src = item.src;
+					img.className = 'cursor-trail-img';
+					el.appendChild(img);
+				} else {
+					el.className = 'cursor-trail-item';
+					el.textContent = item.content;
+				}
+
+				el.style.left = x + 'px';
+				el.style.top = y + 'px';
+				banner.appendChild(el);
+				setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 1100);
+			});
+		})();
+		</script>
+
 		<!-- Adding a button to help bring user to top of page (using some Javascript)-->
 
 		<div>
