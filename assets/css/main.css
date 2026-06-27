@@ -4135,6 +4135,7 @@ body.landing #header {
 	height: 80px;
 	display: block;
 	border-radius: 0;
+	object-fit: cover;
 }
 
 @keyframes trailFadeOut {

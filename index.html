@@ -72,16 +72,15 @@
 				{ type: 'text', content: 'Production Systems' },
 				{ type: 'text', content: 'Snowflake' },
 				{ type: 'text', content: 'Spark' },
-				{ type: 'img', src: 'Media/AWS_Logo.png',                    fit: 'contain' },
-				{ type: 'img', src: 'Media/Coinbase_Logo.jpg',               fit: 'contain' },
-				{ type: 'img', src: 'Media/Cornell_University_Logo.png',     fit: 'contain' },
-				{ type: 'img', src: 'Media/CU_GeoData_Logo.jpg',             fit: 'contain' },
-				{ type: 'img', src: 'Media/Coinbase_Group_Pic.jpg',          fit: 'cover' },
-				{ type: 'img', src: 'Media/Coinbase_Crypto_Stock_Pic.jpg',   fit: 'cover' },
-				{ type: 'img', src: 'Media/Coinbase_Office.jpg',             fit: 'cover' },
-				{ type: 'img', src: 'Media/Amazon_Bonding_Event.jpg',        fit: 'cover' },
-				{ type: 'img', src: 'Media/Amazon_In_Person.jpg',            fit: 'cover' },
-				{ type: 'img', src: 'Media/CU_GeoData_Data_Team_Pic.jpg',    fit: 'cover' }
+				{ type: 'img', src: 'Media/AWS_Logo.png' },
+				{ type: 'img', src: 'Media/Coinbase_Logo.jpg' },
+				{ type: 'img', src: 'Media/Cornell_University_Logo.png' },
+				{ type: 'img', src: 'Media/CU_GeoData_Logo.jpg' },
+				{ type: 'img', src: 'Media/Coinbase_Group_Pic.jpg' },
+				{ type: 'img', src: 'Media/Coinbase_Crypto_Stock_Pic.jpg' },
+				{ type: 'img', src: 'Media/Coinbase_Office.jpg' },
+				{ type: 'img', src: 'Media/Amazon_Bonding_Event.jpg' },
+				{ type: 'img', src: 'Media/CU_GeoData_Data_Team_Pic.jpg' }
 			];
 			var lastX = -999, lastY = -999, minDist = 70;
 
@@ -100,7 +99,6 @@
 					var img = document.createElement('img');
 					img.src = item.src;
 					img.className = 'cursor-trail-img';
-					img.style.objectFit = item.fit;
 					el.appendChild(img);
 				} else {
 					el.className = 'cursor-trail-item';
