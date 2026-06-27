@@ -2305,38 +2305,93 @@ header.major:after {
 
 .typed-out {
 	overflow: hidden;
-	border-right: .1em solid;
 	white-space: nowrap;
-	font-size: 1.6rem;
-	width: 0;
-	animation:
-		typing 5s steps(20, end) forwards infinite,
-		blink 1s infinite;
+	display: inline-block;
+	width: auto;
+	border-right: 0.1em solid transparent;
+}
+
+.typed-out.typing-done {
+	border-right: 0.1em solid rgba(255, 255, 255, 0.75);
+	animation: blinking-cursor 0.75s step-end infinite;
+}
+
+/* ===== Banner Entrance Animations ===== */
+
+@keyframes bannerFadeSlideUp {
+	from { opacity: 0; transform: translateY(16px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blinking-cursor {
+	from, to { border-color: transparent; }
+	50%       { border-color: rgba(255, 255, 255, 0.75); }
+}
+
+#banner .content header h2 {
+	opacity: 0;
+	animation: bannerFadeSlideUp 0.7s ease both 0.2s;
+}
+
+#banner .content .typed-out {
+	opacity: 0;
+	animation: bannerFadeSlideUp 0.5s ease both 0.85s;
+}
+
+#banner .content .icons {
+	opacity: 0;
+	animation: bannerFadeSlideUp 0.5s ease both 1.5s;
+}
+
+.banner-stats {
+	display: flex;
+	justify-content: center;
+	gap: 3em;
+	margin-top: 1.75em;
+	opacity: 0;
+	animation: bannerFadeSlideUp 0.5s ease both 2.0s;
+}
+
+.banner-stats .stat {
+	text-align: center;
+}
+
+.banner-stats .stat-num {
+	display: block;
+	font-size: 2.2em;
+	font-weight: 700;
+	color: #ffffff;
+	line-height: 1;
+}
+
+.banner-stats .stat-label {
+	display: block;
+	font-size: 0.65em;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: rgba(255, 255, 255, 0.55);
+	margin-top: 0.5em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#banner .content header h2,
+	#banner .content .typed-out,
+	#banner .content .icons,
+	.banner-stats {
+		opacity: 1;
+		animation: none;
+	}
 }
 
 @keyframes typing {
-	0% {
-		width: 0
-	}
-
-	25% {
-		width: 50%
-	}
-
-	50%,
-	100% {
-		width: 100%
-	}
+	0% { width: 0 }
+	25% { width: 50% }
+	50%, 100% { width: 100% }
 }
 
 @keyframes blink {
-	from {
-		border-color: transparent
-	}
-
-	to {
-		border-color: #ff5722;
-	}
+	from { border-color: transparent }
+	to   { border-color: #ff5722; }
 }
 
 footer.major {
@@ -4407,6 +4462,10 @@ body.is-touch #banner {
 
 	#banner .content .image {
 		margin: 0;
+	}
+
+	.banner-stats {
+		gap: 2em;
 	}
 
 	/* Footer */

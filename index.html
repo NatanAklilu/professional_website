@@ -23,8 +23,7 @@
 			<div class="content">
 				<header>
 					<h2 style="text-align:center; font-size:4em;">Natan Aklilu</h2>
-					<p class="typed-out" style="text-align:center; font-size:2em;">Software Engineer <span
-							style="font-size:1.3em; font-weight: 300;">|</span> Cornell CS '25</p>
+					<p class="typed-out" style="text-align:center; font-size:2em;"></p>
 					<ul class="icons">
 						<li style="font-size:1.5em">
 							<span class="icon-wrapper">
@@ -41,11 +40,72 @@
 							</span>
 						</li>
 					</ul>
+					<div class="banner-stats">
+						<div class="stat">
+							<span class="stat-num" data-target="3">0</span>
+							<span class="stat-label">Experiences</span>
+						</div>
+						<div class="stat">
+							<span class="stat-num" data-target="4">0</span>
+							<span class="stat-label">Projects</span>
+						</div>
+						<div class="stat">
+							<span class="stat-num" data-target="300" data-suffix="+">0</span>
+							<span class="stat-label">Students Taught</span>
+						</div>
+					</div>
 				</header>
 				<span class="image"><img src="Media/Natan_Aklilu_Headshot_Square.jpg" alt="" /></span>
 			</div>
 			<a href="#one" class="goto-next scrolly">Next</a>
 		</section>
+
+		<script>
+		(function () {
+			var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			var typedEl = document.querySelector('.typed-out');
+			var fullText = "Software Engineer  |  Cornell CS '25";
+
+			if (reducedMotion) {
+				typedEl.textContent = fullText;
+				document.querySelectorAll('.stat-num').forEach(function (el) {
+					el.textContent = el.dataset.target + (el.dataset.suffix || '');
+				});
+				return;
+			}
+
+			// Typewriter — starts after subtitle fades in (~950ms)
+			setTimeout(function () {
+				var i = 0;
+				function type() {
+					if (i < fullText.length) {
+						typedEl.textContent += fullText[i++];
+						setTimeout(type, 55);
+					} else {
+						typedEl.classList.add('typing-done');
+					}
+				}
+				type();
+			}, 950);
+
+			// Stat counters — start after stats section fades in (~2200ms)
+			setTimeout(function () {
+				document.querySelectorAll('.stat-num').forEach(function (el) {
+					var target = parseInt(el.dataset.target);
+					var suffix = el.dataset.suffix || '';
+					var duration = 1400;
+					var startTime = performance.now();
+					function update(now) {
+						var elapsed = Math.min(now - startTime, duration);
+						var progress = 1 - Math.pow(1 - elapsed / duration, 3);
+						el.textContent = Math.round(progress * target) + suffix;
+						if (elapsed < duration) requestAnimationFrame(update);
+					}
+					requestAnimationFrame(update);
+				});
+			}, 2200);
+		})();
+		</script>
 
 		<!-- Adding a button to help bring user to top of page (using some Javascript)-->
 
