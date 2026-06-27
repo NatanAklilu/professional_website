@@ -47,6 +47,68 @@
 			<a href="#one" class="goto-next scrolly">Next</a>
 		</section>
 
+		<script>
+		(function () {
+			if (!window.matchMedia('(hover: hover)').matches) return;
+			if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+			var banner = document.getElementById('banner');
+			var trailPool = [
+				{ type: 'text', content: 'Golang' },
+				{ type: 'text', content: 'AWS' },
+				{ type: 'text', content: 'TypeScript' },
+				{ type: 'text', content: 'Scala' },
+				{ type: 'text', content: 'Python' },
+				{ type: 'text', content: 'OCaml' },
+				{ type: 'text', content: 'gRPC' },
+				{ type: 'text', content: 'Datadog' },
+				{ type: 'text', content: 'MongoDB' },
+				{ type: 'text', content: 'SageMaker' },
+				{ type: 'text', content: 'Temporal' },
+				{ type: 'text', content: "Cornell CS '25" },
+				{ type: 'text', content: 'Backend Eng' },
+				{ type: 'text', content: '300+ Students' },
+				{ type: 'text', content: '4 Projects' },
+				{ type: 'text', content: 'Production Systems' },
+				{ type: 'text', content: 'Snowflake' },
+				{ type: 'text', content: 'Spark' },
+				{ type: 'img', src: 'Media/AWS_Logo.png',              alt: 'AWS' },
+				{ type: 'img', src: 'Media/Coinbase_Logo_3.jpg',       alt: 'Coinbase' },
+				{ type: 'img', src: 'Media/Cornell_University_Logo.png', alt: 'Cornell' },
+				{ type: 'img', src: 'Media/CU_GeoData_Logo_2.jpg',     alt: 'GeoData' }
+			];
+			var lastX = -999, lastY = -999, minDist = 70;
+
+			banner.addEventListener('mousemove', function (e) {
+				var rect = banner.getBoundingClientRect();
+				var x = e.clientX - rect.left;
+				var y = e.clientY - rect.top;
+				if (Math.hypot(x - lastX, y - lastY) < minDist) return;
+				lastX = x; lastY = y;
+
+				var item = trailPool[Math.floor(Math.random() * trailPool.length)];
+				var el = document.createElement('span');
+
+				if (item.type === 'img') {
+					el.className = 'cursor-trail-item cursor-trail-img-item';
+					var img = document.createElement('img');
+					img.src = item.src;
+					img.alt = item.alt;
+					img.className = 'cursor-trail-img';
+					el.appendChild(img);
+				} else {
+					el.className = 'cursor-trail-item';
+					el.textContent = item.content;
+				}
+
+				el.style.left = x + 'px';
+				el.style.top = y + 'px';
+				banner.appendChild(el);
+				setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 1100);
+			});
+		})();
+		</script>
+
 		<!-- Adding a button to help bring user to top of page (using some Javascript)-->
 
 		<div>
