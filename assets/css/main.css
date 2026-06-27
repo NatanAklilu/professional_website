@@ -4121,20 +4121,19 @@ body.landing #header {
 }
 
 .cursor-trail-img-item {
-	padding: 6px;
+	padding: 0;
 	border-radius: 10px;
-	width: 68px;
-	height: 60px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(255, 255, 255, 0.95);
+	background: none;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	overflow: hidden;
+	width: auto;
+	height: auto;
 }
 
 .cursor-trail-img {
-	width: 54px;
-	height: 46px;
-	object-fit: contain;
+	width: 72px;
+	height: 54px;
+	display: block;
 	border-radius: 0;
 }
 
