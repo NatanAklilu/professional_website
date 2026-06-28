@@ -4143,6 +4143,19 @@ body.landing #header {
 	100% { opacity: 0;    transform: translate(-50%, -50%) translateY(-52px); }
 }
 
+/* Typewriter cursor */
+.tw-cursor {
+	display: inline-block;
+	font-weight: 400;
+	animation: twBlink 0.7s step-end infinite;
+	margin-left: 1px;
+}
+
+@keyframes twBlink {
+	0%, 100% { opacity: 1; }
+	50%       { opacity: 0; }
+}
+
 #banner:before {
 	content: '';
 	display: inline-block;
