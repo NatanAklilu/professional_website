@@ -135,6 +135,85 @@
 		})();
 		</script>
 
+		<script>
+		(function () {
+			if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+			function init() {
+				var h2    = document.querySelector('#banner h2');
+				var typed = document.querySelector('#banner .typed-out');
+				var icons = document.querySelector('#banner ul.icons');
+				var img   = document.querySelector('#banner .image');
+				if (!h2 || !typed || !icons || !img) return;
+
+				var fullText = "Software Engineer | Cornell CS \u002725";
+
+				// Lock height to prevent layout shift during typewriter
+				typed.style.minHeight = typed.offsetHeight + 'px';
+
+				// Set initial hidden states
+				h2.style.cssText    += ';opacity:0;transform:translateY(32px)';
+				icons.style.cssText += ';opacity:0;transform:translateY(20px)';
+				img.style.cssText   += ';opacity:0;transform:translateX(48px)';
+				typed.style.opacity  = '0';
+
+				function reveal(el, tx, ty, ms) {
+					el.style.transition = 'opacity ' + ms + 'ms cubic-bezier(.22,1,.36,1), transform ' + ms + 'ms cubic-bezier(.22,1,.36,1)';
+					el.style.opacity    = '1';
+					el.style.transform  = 'translateX(' + tx + 'px) translateY(' + ty + 'px)';
+				}
+
+				// Staggered entrance sequence
+				setTimeout(function () { reveal(h2,    0, 0, 750); }, 150);
+				setTimeout(function () { reveal(img,   0, 0, 900); }, 450);
+				setTimeout(function () {
+					reveal(icons, 0, 0, 600);
+					startTypewriter();
+				}, 950);
+
+				// ── Typewriter ──────────────────────────────────────
+				var cursor = document.createElement('span');
+				cursor.className = 'tw-cursor';
+				cursor.textContent = '|';
+
+				function startTypewriter() {
+					typed.innerHTML = '';
+					typed.appendChild(cursor);
+					typed.style.opacity = '1';
+					typeIn(0);
+				}
+
+				function typeIn(i) {
+					if (i < fullText.length) {
+						typed.insertBefore(document.createTextNode(fullText[i]), cursor);
+						setTimeout(function () { typeIn(i + 1); }, 55);
+					} else {
+						setTimeout(erase, 3200);
+					}
+				}
+
+				function erase() {
+					var nodes = Array.prototype.slice.call(typed.childNodes).filter(function (n) { return n !== cursor; });
+					if (!nodes.length) { setTimeout(startTypewriter, 500); return; }
+					var last = nodes[nodes.length - 1];
+					if (last.textContent.length > 1) {
+						last.textContent = last.textContent.slice(0, -1);
+					} else {
+						typed.removeChild(last);
+					}
+					setTimeout(erase, 35);
+				}
+			}
+
+			// Run after the template's is-preload handling has completed
+			if (document.readyState === 'complete') {
+				setTimeout(init, 50);
+			} else {
+				window.addEventListener('load', function () { setTimeout(init, 50); });
+			}
+		})();
+		</script>
+
 		<!-- Adding a button to help bring user to top of page (using some Javascript)-->
 
 		<div>
