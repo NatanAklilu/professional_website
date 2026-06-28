@@ -91,16 +91,29 @@
 				{ type: 'img', src: 'Media/Amazon_Bonding_Event.jpg' },
 				{ type: 'img', src: 'Media/CU_GeoData_Data_Team_Pic.jpg' }
 			];
-			var lastX = -999, lastY = -999, minDist = 100;
+		var lastX = -999, lastY = -999, minDist = 100;
 
-			banner.addEventListener('mousemove', function (e) {
-				var rect = banner.getBoundingClientRect();
-				var x = e.clientX - rect.left;
-				var y = e.clientY - rect.top;
-				if (Math.hypot(x - lastX, y - lastY) < minDist) return;
-				lastX = x; lastY = y;
+		// Shuffled queue: deal through every item once before any can repeat
+		var queue = [];
+		function nextItem() {
+			if (queue.length === 0) {
+				queue = trailPool.slice();
+				for (var i = queue.length - 1; i > 0; i--) {
+					var j = Math.floor(Math.random() * (i + 1));
+					var tmp = queue[i]; queue[i] = queue[j]; queue[j] = tmp;
+				}
+			}
+			return queue.pop();
+		}
 
-				var item = trailPool[Math.floor(Math.random() * trailPool.length)];
+		banner.addEventListener('mousemove', function (e) {
+			var rect = banner.getBoundingClientRect();
+			var x = e.clientX - rect.left;
+			var y = e.clientY - rect.top;
+			if (Math.hypot(x - lastX, y - lastY) < minDist) return;
+			lastX = x; lastY = y;
+
+			var item = nextItem();
 				var el = document.createElement('span');
 
 				if (item.type === 'img') {
