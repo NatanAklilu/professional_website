@@ -4845,6 +4845,14 @@ body.is-touch #banner {
 	padding: 0 0 0.75em 0;
 }
 
+#sidebar ul li:not(:first-child) {
+	margin-top: 0.75em;
+}
+
+#sidebar ul {
+	padding-bottom: 1.5em;
+}
+
 #sidebar ul li b {
 	color: white !important;
 }
